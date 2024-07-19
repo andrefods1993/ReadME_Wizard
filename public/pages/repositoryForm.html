@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ReadMe Wizard: Repositório</title>
+		<link rel="shortcut icon" href="../assets/images/ReadMEWizard_icon.png" type="image/x-icon" />
+
+		<!-- Styles CSS -->
+		<link rel="stylesheet" href="../assets/css/styles_form.css" />
+	</head>
+	<body class="fade-in">
+		<!-- HEADER -->
+		<header class="header">
+			<!-- Theme Toggle -->
+			<div class="header__theme">
+				<div class="theme__toggle">
+					<input id="theme--toggle" type="checkbox" />
+					<label for="theme--toggle"></label>
+				</div>
+			</div>
+
+			<!-- Logo -->
+			<div class="header__logo">
+				<a class="fade-link" href="../index.html"
+					><img src="../assets/images/ReadMEWizard.png" alt="Logo ReadME Wizard Logo"
+				/></a>
+			</div>
+		</header>
+
+		<!-- MAIN -->
+		<main class="main">
+			<!-- README generator form -->
+			<section class="readme">
+				<h2>Crie Seu README de Repositório</h2>
+				<form class="readme__form" id="readme__form">
+					<div class="readme__form__info">
+						<!-- Project Name -->
+						<div class="readme__form__section">
+							<label for="name">Nome do Projeto:</label>
+							<input type="text" id="name" name="name" required />
+						</div>
+
+						<!-- Image path -->
+						<div class="readme__form__section">
+							<label for="imgPath">Caminho da Imagem:</label>
+							<input type="text" id="imgPath" name="imgPath" />
+						</div>
+					</div>
+
+					<div class="readme__form__main">
+						<!-- Description -->
+						<div class="readme__form__section">
+							<label for="description">Descrição:</label>
+							<textarea id="description" name="description" rows="4" required></textarea>
+						</div>
+
+						<!-- List of Technologies Used -->
+						<div class="readme__form__section">
+							<label for="skills">Tecnologias Utilizadas:</label>
+							<div class="dropdown__container">
+								<button type="button" class="dropdown__toggle" aria-label="Selecionar Skills">
+									Selecionar Tecnologias
+								</button>
+								<div class="dropdown">
+									<div class="dropdown__header">
+										<input type="text" placeholder="Buscar..." id="dropdown--search" />
+									</div>
+									<div class="dropdown__list">
+										<label class="dropdown__item dropdown__item--all">
+											<input type="checkbox" id="select--all" /> Selecionar tudo
+										</label>
+									</div>
+								</div>
+							</div>
+							<div id="selected--skills"></div>
+						</div>
+					</div>
+
+					<!-- Functionalities -->
+					<div class="readme__form__section">
+						<label for="functionalities">Funcionalidades:</label>
+						<textarea id="functionalities" name="functionalities" rows="4" required></textarea>
+					</div>
+
+					<!-- Demonstration -->
+					<div class="readme__form__section">
+						<label for="demonstration">Demonstração:</label>
+						<textarea id="demonstration" name="demonstration" rows="4"></textarea>
+					</div>
+
+					<div class="readme__form__info info--select">
+						<!-- Project Status -->
+						<div class="readme__status">
+							<label for="projectStatus">Status do projeto:</label>
+							<select id="projectStatus" name="projectStatus">
+								<option
+									value="🚀 **Planejamento**: O projeto está na fase de planejamento. Ideias e requisitos estão sendo discutidos e definidos."
+								>
+									🚀 Planejamento
+								</option>
+								<option
+									value="🔨 **Em Andamento**: O projeto está atualmente em desenvolvimento ativo. Recursos e funcionalidades estão sendo implementados."
+								>
+									🔨 Em Andamento
+								</option>
+								<option
+									value="⏸️ **Em Pausa**: O desenvolvimento do projeto foi temporariamente suspenso. Pode ser retomado no futuro."
+								>
+									⏸️ Em Pausa
+								</option>
+								<option
+									value="✅ **Concluído**: O projeto foi finalizado e todas as funcionalidades planejadas foram implementadas."
+								>
+									✅ Concluído
+								</option>
+								<option
+									value="🛠️ **Em Manutenção**: O projeto está sendo mantido, com atualizações e correções de bugs regulares."
+								>
+									🛠️ Em Manutenção
+								</option>
+								<option
+									value="❌ **Abandonado**: O desenvolvimento do projeto foi descontinuado e não será retomado."
+								>
+									❌ Abandonado
+								</option>
+								<option
+									value="🧪 **Beta**: O projeto está em fase beta, disponível para testes, mas ainda pode conter bugs e estar incompleto."
+								>
+									🧪 Beta
+								</option>
+								<option
+									value="⚗️ **Alpha**: O projeto está em uma fase inicial de desenvolvimento, onde grandes mudanças ainda estão ocorrendo e pode não estar estável."
+								>
+									⚗️ Alpha
+								</option>
+								<option
+									value="🎯 **Release Candidate**: O projeto está em uma fase quase final, onde está sendo testado para bugs antes de uma versão final ser lançada."
+								>
+									🎯 Release Candidate
+								</option>
+								<option
+									value="🛑 **Deprecated**: O projeto não é mais recomendado para uso e pode ser removido ou substituído por uma versão mais nova."
+								>
+									🛑 Deprecated
+								</option>
+								<option
+									value="🔄 **Atualizando**: O projeto está sendo atualizado com novos recursos ou melhorias."
+								>
+									🔄 Atualizando
+								</option>
+								<option
+									value="🔍 **Em Revisão**: O projeto está sendo revisado, seja por meio de código, design ou feedback de usuários."
+								>
+									🔍 Em Revisão
+								</option>
+								<option
+									value="📦 **Pronto para Lançamento**: O projeto está pronto para ser lançado, aguardando apenas formalidades ou marketing."
+								>
+									📦 Pronto para Lançamento
+								</option>
+								<option
+									value="🧩 **Em Testes**: O projeto está em fase de testes, sendo verificado para garantir qualidade e funcionamento correto."
+								>
+									🧩 Em Testes
+								</option>
+							</select>
+						</div>
+
+						<!-- License -->
+						<div class="readme__license">
+							<label for="license">Licença do projeto:</label>
+							<select id="license" name="license">
+								<option value="[MIT License](https://opensource.org/licenses/MIT)">MIT License</option>
+								<option
+									value="[GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.html)"
+								>
+									GNU General Public License (GPL)
+								</option>
+								<option value="[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)">
+									Apache License 2.0
+								</option>
+								<option
+									value="[BSD License (2-Clause, 3-Clause)](https://opensource.org/licenses/BSD-3-Clause)"
+								>
+									BSD License (2-Clause, 3-Clause)
+								</option>
+								<option value="[Creative Commons (CC)](https://creativecommons.org/licenses/)">
+									Creative Commons (CC)
+								</option>
+								<option value="[Mozilla Public License (MPL)](https://www.mozilla.org/en-US/MPL/2.0/)">
+									Mozilla Public License (MPL)
+								</option>
+								<option value="[Eclipse Public License (EPL)](https://www.eclipse.org/legal/epl-2.0/)">
+									Eclipse Public License (EPL)
+								</option>
+								<option value="[ISC License](https://opensource.org/licenses/ISC)">ISC License</option>
+								<option value="[Artistic License 2.0](https://opensource.org/licenses/Artistic-2.0)">
+									Artistic License 2.0
+								</option>
+								<option value="[Boost Software License](https://www.boost.org/users/license.html)">
+									Boost Software License
+								</option>
+								<option value="[Unlicense](https://unlicense.org/)">Unlicense</option>
+								<option value="[Academic Free License (AFL)](https://opensource.org/licenses/AFL-3.0)">
+									Academic Free License (AFL)
+								</option>
+								<option
+									value="[Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.html)"
+								>
+									Affero General Public License (AGPL)
+								</option>
+								<option
+									value="[Educational Community License (ECL)](https://opensource.org/licenses/ECL-2.0)"
+								>
+									Educational Community License (ECL)
+								</option>
+								<option
+									value="[European Union Public License (EUPL)](https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12)"
+								>
+									European Union Public License (EUPL)
+								</option>
+								<option
+									value="[LaTeX Project Public License (LPPL)](https://www.latex-project.org/lppl/)"
+								>
+									LaTeX Project Public License (LPPL)
+								</option>
+								<option
+									value="[Microsoft Public License (MS-PL)](https://opensource.org/licenses/MS-PL)"
+								>
+									Microsoft Public License (MS-PL)
+								</option>
+								<option value="[Open Software License (OSL)](https://opensource.org/licenses/OSL-3.0)">
+									Open Software License (OSL)
+								</option>
+								<option value="[SIL Open Font License (OFL)](https://opensource.org/licenses/OFL-1.1)">
+									SIL Open Font License (OFL)
+								</option>
+								<option value="[Zlib License](https://opensource.org/licenses/Zlib)">
+									Zlib License
+								</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Contributors -->
+					<div class="readme__form__section">
+						<label for="contributor">Nome do Contribuidor:</label>
+						<input type="text" id="contributor" placeholder="Digite o GitHub do contribuidor" />
+						<button type="button" id="addContributor" class="btn btn--contributor">Adicionar</button>
+
+						<ul id="contributorList" class="contributor-list">
+							<!-- Lista de contribuidores será inserida aqui -->
+						</ul>
+					</div>
+
+					<!-- Models -->
+					<div class="readme__models">
+						<label for="templateName">Modelo:</label>
+						<select id="templateName" name="templateName">
+							<option value="Repositório - Basilisk">Repositório - Basilisk</option>
+							<option value="Repositório - Dragon">Repositório - Dragon</option>
+							<option value="Repositório - Leviathan">Repositório - Leviathan</option>
+						</select>
+					</div>
+
+					<!-- Button to Generate Readme -->
+					<div class="readme__form__btn">
+						<button type="submit" class="btn">Gerar README</button>
+					</div>
+				</form>
+
+				<!-- Result -->
+				<div id="result"></div>
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<!-- Copyright -->
+			<div class="footer__copy">
+				<p>&copy; 2024 ReadMe Wizard. Todos os direitos reservados.</p>
+			</div>
+
+			<!-- Social Media -->
+			<div class="footer__social">
+				<!-- Instagram -->
+				<a href="https://www.instagram.com/andrefilipeods" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						x="0px"
+						y="0px"
+						width="100"
+						height="100"
+						viewBox="0 0 50 50"
+					>
+						<path
+							d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"
+						></path>
+					</svg>
+				</a>
+
+				<!-- Linkedin -->
+				<a href="https://www.linkedin.com/in/andrefilipeods" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						x="0px"
+						y="0px"
+						width="100"
+						height="100"
+						viewBox="0 0 50 50"
+					>
+						<path
+							d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+						></path>
+					</svg>
+				</a>
+
+				<!-- WhatsApp -->
+				<a href="https://wa.me/5573981547597" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						x="0px"
+						y="0px"
+						width="100"
+						height="100"
+						viewBox="0 0 50 50"
+					>
+						<path
+							d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"
+						></path>
+					</svg>
+				</a>
+
+				<!-- Gmail -->
+				<a href="mailto:odsandrefilipe@gmail.com" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						x="0px"
+						y="0px"
+						width="100"
+						height="100"
+						viewBox="0 0 50 50"
+					>
+						<path
+							d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z"
+						></path>
+					</svg>
+				</a>
+
+				<!-- GitHub -->
+				<a href="https://github.com/andrefods1993" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						x="0px"
+						y="0px"
+						width="100"
+						height="100"
+						viewBox="0 0 64 64"
+					>
+						<path
+							d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"
+						></path>
+					</svg>
+				</a>
+			</div>
+		</footer>
+
+		<!-- Scripts JS -->
+		<script src="../assets/js/repository.js"></script>
+		<script src="../assets/js/form_handler_repository.js"></script>
+	</body>
+</html>

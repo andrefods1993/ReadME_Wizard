@@ -1,0 +1,315 @@
+@import url("styles.css");
+
+/* 
+	-> LOGO
+*/
+.header__logo img {
+	width: 100px;
+}
+
+/* 
+	-> README FORM
+*/
+.readme {
+	background-color: var(--bg-form);
+	padding: 2rem;
+	border-radius: 1rem;
+	width: 100%;
+	max-width: 900px;
+}
+
+.readme h2 {
+	padding-bottom: 1rem;
+}
+
+.readme__form {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.readme__form__info,
+.readme__form__main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.readme__form__section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.3rem;
+	font-weight: bold;
+}
+
+input,
+textarea,
+select {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: var(--white);
+}
+
+/* 
+	-> LIST OF SKILLS
+*/
+.dropdown__container {
+	width: 100%;
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+.dropdown__toggle {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: var(--white);
+	cursor: pointer;
+	text-align: left;
+	color: var(--primary-color);
+}
+
+.dropdown__toggle::after {
+	content: "▼";
+	float: right;
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: var(--white);
+	z-index: 1;
+}
+
+.dropdown.show {
+	display: block;
+}
+
+.dropdown__header {
+	padding: 0.5rem;
+	border-bottom: 1px solid #ccc;
+}
+
+#dropdown--search {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.dropdown__list {
+	max-height: 200px;
+	overflow-y: auto;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dropdown__item {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	cursor: pointer;
+	color: var(--primary-color);
+	font-weight: 500;
+}
+
+.dropdown__item--all {
+	font-weight: 700;
+}
+
+.dropdown__item:hover {
+	background-color: var(--light-md-color);
+	border-radius: 5px;
+}
+
+.dropdown__checkbox,
+#select--all {
+	width: 36px;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+/* 
+	-> PROJECTS
+*/
+.projects__section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.projects__section h3 {
+	margin-bottom: 0.5rem;
+}
+
+.check__field {
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 6px;
+	text-align: left;
+}
+
+.check__field input {
+	width: 12px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	bottom: 2px;
+}
+
+.project__info {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.project__info--name,
+.project__info--link {
+	width: 100%;
+	text-align: center;
+}
+
+.projects__section .readme__form__section {
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+	background-color: var(--bg-form-int);
+	border-radius: 1rem;
+}
+
+/* 
+	-> CONTACTS
+*/
+.readme__contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.4rem;
+	flex-wrap: wrap;
+}
+
+.readme__contact .readme__form__section {
+	min-height: 50px;
+	min-width: 160px;
+}
+
+.readme__contact h3 {
+	width: 100%;
+}
+
+.readme__form__btn {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/* 
+	-> MODELS
+*/
+.readme__models {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.readme__models select {
+	max-width: 220px;
+	font-size: 1rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.readme__models option {
+	font-size: 1rem;
+}
+
+/* 
+	-> RESULT
+*/
+#result {
+	margin-top: 1.5rem;
+	font-size: 1.3rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+/* Contributors */
+
+.btn--contributor {
+	background: #8d31ca;
+	font-size: 0.875rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	max-width: 140px;
+}
+
+.contributor-list {
+	list-style: none;
+	text-align: start;
+}
+
+/* 
+	-> MEDIA QUERY
+*/
+/* Mobile */
+@media only screen and (min-width: 475px) {
+	.header__logo img {
+		width: 120px;
+	}
+}
+
+/* Tablet */
+@media only screen and (min-width: 765px) {
+	.readme__form__info,
+	.readme__form__main,
+	.project__info {
+		flex-direction: row;
+		gap: 1rem;
+	}
+
+	.info--select {
+		justify-content: center;
+	}
+
+	.readme__form__section {
+		align-items: start;
+	}
+
+	.project__info--name,
+	.project__info--link {
+		text-align: left;
+	}
+
+	.readme__contact .readme__form__section {
+		max-width: 170px;
+	}
+}
+
+/* 
+	-> LIGHT THEME
+*/
+.readme.light {
+	background-color: var(--bg-form-light);
+}
+
+.projects__section .readme__form__section.light {
+	background-color: var(--bg-form-int-light);
+}

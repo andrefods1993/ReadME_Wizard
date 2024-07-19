@@ -1,0 +1,334 @@
+/* 
+	-> CDN: Reset CSS
+*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css");
+
+/* 
+	-> Google Fonts: Josefin Sans
+	*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* 
+	-> Standard variables
+*/
+:root {
+	--primary-color: #2f3349;
+	--secondary-color: #2f3949;
+	--tertiary-color: #212833;
+	--light-color: #e8f1ff;
+	--light-md-color: #d2e3ff;
+	--white: #ffffff;
+	--btn-color: #4131ca;
+	--bg-form: var(--tertiary-color);
+	--bg-form-int: var(--primary-color);
+	--bg-form-light: var(--light-md-color);
+	--bg-form-int-light: var(--light-color);
+}
+
+* {
+	font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--primary-color);
+	color: var(--light-color);
+}
+
+/* 
+	-> HEADER
+*/
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 1rem;
+}
+
+.header p {
+	font-size: 0.876rem;
+	padding-top: 0.3rem;
+}
+
+/*
+	-> THEME TOGGLE
+*/
+.header__theme {
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	padding: 1rem;
+}
+
+.header__theme input {
+	display: none;
+}
+
+.theme__toggle {
+	width: 3rem;
+}
+
+.theme__toggle label {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 1.5rem;
+	box-shadow: 2px 2px 8px 3px rgba(90, 90, 90, 0.15);
+	background: rgba(255, 255, 255, 0);
+	position: relative;
+	cursor: pointer;
+	border-radius: 1rem;
+}
+
+.theme__toggle label::after {
+	content: "";
+	position: absolute;
+	left: 0.25rem;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: var(--light-color);
+	transition: all 0.4s ease;
+}
+
+.theme__toggle label::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	opacity: 1;
+	background: linear-gradient(330deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--tertiary-color) 100%);
+	transition: all 0.4s ease;
+}
+
+.header__theme input:checked ~ label::before {
+	opacity: 0;
+}
+
+.header__theme input:checked ~ label::after {
+	left: 58%;
+	background: var(--primary-color);
+}
+
+/* 
+	-> LOGO
+*/
+.header__logo img {
+	width: 180px;
+}
+
+/* 
+	-> MAIN
+*/
+.main {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 1rem;
+}
+
+/* 
+	-> INTRODUCTION
+*/
+.main__intro {
+	max-width: 900px;
+}
+
+.main__intro h2 {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.main__intro p {
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	color: var(--light-md-color);
+}
+
+/* 
+	-> TEMPLATES BUTTONS
+*/
+.main__intro__btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+}
+
+/*
+	-> BUTTONS
+*/
+.btn {
+	width: 90%;
+	max-width: 280px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--btn-color);
+	color: var(--light-md-color);
+	font-size: 1rem;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 1rem;
+	box-shadow: inset 0.2rem 0.2rem 1rem rgba(90, 90, 90, 0.15), inset -0.2rem -0.2rem 1rem rgba(90, 90, 90, 0.15),
+		0.3rem 0.3rem 0.6rem rgba(90, 90, 90, 0.15), -0.2rem -0.2rem 0.5rem rgba(90, 90, 90, 0.15);
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+.btn:hover {
+	color: var(--white);
+	transform: scale(1.05);
+}
+.btn:active {
+	box-shadow: inset 0.2rem 0.2rem 1rem #1d146d, inset -0.2rem -0.2rem 1rem #877bf3;
+}
+
+/* 
+	-> FOOTER
+*/
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem;
+	background-color: var(--tertiary-color);
+}
+
+.footer__copy {
+	text-align: center;
+	padding-bottom: 0.5rem;
+}
+
+/* 
+	-> SOCIAL MEDIA
+*/
+.footer__social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.footer__social a {
+	text-decoration: none;
+}
+
+.footer__social svg {
+	width: 24px;
+	height: 24px;
+	fill: var(--light-color);
+	transition: all 0.3s ease;
+}
+
+.footer__social a:hover svg {
+	fill: var(--btn-color);
+}
+
+.footer__social a:active svg {
+	fill: var(--btn-color);
+	transform: scale(1.05);
+}
+
+/* 
+	-> MEDIA QUERY
+*/
+/* Mobile */
+@media only screen and (min-width: 475px) {
+	.header p {
+		font-size: 1.1rem;
+		padding-top: 0.5rem;
+	}
+
+	.header__logo img {
+		width: 230px;
+	}
+
+	.btn {
+		font-size: 1.1rem;
+	}
+
+	.footer {
+		justify-content: space-around;
+	}
+
+	.footer__copy {
+		padding-bottom: 0;
+	}
+}
+
+/* Tablet */
+@media only screen and (min-width: 765px) {
+	.main__intro__btn {
+		flex-direction: row;
+	}
+
+	.btn {
+		width: 45%;
+	}
+}
+
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+	.header__theme {
+		max-width: 1024px;
+	}
+}
+
+/* 
+	-> LIGHT THEME
+*/
+body.light {
+	background-color: var(--light-color);
+	color: var(--primary-color);
+}
+
+.main__intro p.light {
+	color: var(--secondary-color);
+}
+
+.footer.light {
+	background-color: var(--light-md-color);
+}
+
+.footer__copy p.light {
+	color: var(--primary-color);
+}
+.footer__social svg.light {
+	fill: var(--primary-color);
+}
+
+/* 
+	-> Efeito de fade-in
+*/
+.fade-in {
+	animation: fadeIn 0.3s ease-in;
+}
+
+/*
+	-> Efeito de fade-out
+*/
+.fade-out {
+	opacity: 0;
+	transition: opacity 0.3s ease-in;
+}
+
+/*
+	-> Definindo a animação fadeIn
+*/
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
