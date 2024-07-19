@@ -1,7 +1,7 @@
 <h1 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Collision.webp" alt="Collision" width="40" height="40" /> ReadME Wizard - Cria seu README <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Collision.webp" alt="Collision" width="40" height="40" /></h1>
 
 <div align="center">
-<img src="assets/images/ReadMEWizard_light.png" width="480" />
+<img src="https://github.com/andrefods1993/ReadME_Wizard/blob/main/public/assets/images/ReadMEWizard.png" width="400" />
 </div>
 
 <p align="center">
@@ -67,5 +67,4 @@ Este projeto é licenciado sobre a licença [MIT License](https://opensource.org
 
 [@andrefods1993](https://github.com/andrefods1993)
 
-<span style="font-size: 10px;"> [ReadME Wizard](https://github.com/andrefods1993) </span># ReadME_Wizard
-# ReadME_Wizard
+<span style="font-size: 10px;"> [ReadME Wizard](https://github.com/andrefods1993) </span>
